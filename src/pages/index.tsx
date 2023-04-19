@@ -2,6 +2,8 @@
 // import Image from 'next/image'
 import { Inter } from 'next/font/google'
 // import styles from '@/styles/Home.module.css'
+import ContactUs from './components/ContactUs'
+import About from './components/About'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -119,9 +121,11 @@ export default function Home() {
         </div>
       </main> */}
 
-<h1>Hello! Fellow Developer</h1>
-<h1>Hello! Fellow Developer</h1>
 
+<h1>Hello! Fellow Developer</h1>
+<h1>Hello! Fellow Developer</h1>
+<ContactUs/>
+<About/>
 
 
     </>
