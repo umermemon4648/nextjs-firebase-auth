@@ -7,6 +7,7 @@ const signin = () => {
   const router = useRouter();
     const [user, setUser] = useState(null);
 
+
     const googleSignin = async () => {
       try {
         const result = await signInWithPopup(auth, googleProvider);
@@ -27,15 +28,13 @@ const signin = () => {
     
 
 
-    const signOutHandler =  async()=>{
-      await signOut(auth)
-      // console.log("result: ",result)
-      let authenticatedUser = null
-      setUser(authenticatedUser);
-      localStorage.clear()
-      alert("Signout SuccessFully")
-      
-  }
+  //   const signOutHandler =  async()=>{
+  //     await signOut(auth)
+  //     let authenticatedUser = null
+  //     setUser(authenticatedUser);
+  //     localUser = localStorage.clear()
+  //     alert("Signout SuccessFully")
+  // }
 
     useEffect(()=>{
       // googleSignin()
@@ -49,13 +48,18 @@ const signin = () => {
     
     {/* <div>signin</div> */}
 
-    {user ? (
+    {/* {localUser ? (
   <button onClick={signOutHandler} type="submit">Sign Out</button>
 ) : (
   <button onClick={googleSignin} type="submit">Sign in with Google</button>
-)}
+)} */}
 
-    
+<h1>this is signin Page</h1>
+
+  <button onClick={googleSignin} type="submit">Sign in with Google</button>
+
+
+
     </>
   )
 }
