@@ -2,7 +2,7 @@ import {auth, fbProvider, googleProvider, githubProvider} from '../../config/fir
 import {signInWithPopup, signOut} from 'firebase/auth'
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import {AiFillFacebook} from 'react-icons/ai'
+import {AiFillFacebook,AiFillGithub} from 'react-icons/ai'
 import {FcGoogle} from 'react-icons/fc'
 
 const signin = () => {
@@ -55,21 +55,28 @@ const signin = () => {
 ) : (
   <button onClick={googleSignin} type="submit">Sign in with Google</button>
 )} */}
-<div className='shadow-xl mt-32 bg-[#fafafa] p-10 text-gray-700 rounded-lg border-2  w-1/2'>
+<div className='w-2/5 mx-auto  shadow-xl mt-32 bg-[#fafafa] p-10 text-gray-700 rounded-lg '>
 
-<h1 className='text-red-400 text-3xl font-bold underline'>this is signin Page</h1>
+<h1 className='text-red-400 text-3xl font-bold underline'>Register your account </h1>
 
-<div className='flex flex-col gap-4 mt-4'>
+<div className='items-center  flex flex-col gap-4 mt-4'>
   <button className='text-white bg-gray-800 w-1/2 p-3 font-medium rounded-lg flex align-middle gap-2 hover:bg-gray-700' onClick={googleSignin} type="submit">
     <FcGoogle className='text-2xl'/>
-    Sign in with Google</button>
+    Continue with Google</button>
   
   <button className='text-white bg-gray-800 w-1/2 p-3 font-medium rounded-lg flex align-middle gap-2 hover:bg-gray-700' onClick={googleSignin} type="submit">
     <AiFillFacebook className='text-2xl text-blue-400'/>
-    Sign in with Facebook</button>
+    Continue with Facebook</button>
 
+    <button className='text-white bg-gray-800 w-1/2 p-3 font-medium rounded-lg flex align-middle gap-2 hover:bg-gray-700' onClick={googleSignin} type="submit">
+    <AiFillGithub className='text-2xl '/>
+    Continue with Github</button>
 
 </div>
+
+  <div>
+    <p className='mt-3 text-gray-700'>By joining, you agree to our <strong>Terms of Service</strong>  and <strong>Privacy Policy</strong></p>
+  </div>
 
 </div>
     </>
